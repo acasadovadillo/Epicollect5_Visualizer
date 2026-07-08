@@ -122,3 +122,102 @@ body {
 .card-header {
     font-size: 0.78rem;
 }
+
+/* ── Paleo — fossil color ────────────────────────────── */
+.text-fossil { color: #8B4513; }
+
+/* ── Paleo — species cards ───────────────────────────── */
+.species-card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.species-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
+}
+.species-card-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+.species-card-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    background: #f8f0e0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #8B4513;
+}
+
+/* ── Paleo — geological timeline ─────────────────────── */
+.tl-container {
+    width: 100%;
+    overflow-x: auto;
+}
+.tl-era-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2px 0;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+}
+.tl-period {
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: filter 0.12s;
+    overflow: hidden;
+}
+.tl-period:hover { filter: brightness(1.15); }
+.tl-period.tl-era-active {
+    outline: 3px solid rgba(0,0,0,0.5);
+    outline-offset: -3px;
+    z-index: 1;
+}
+.tl-epoch {
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.35);
+    overflow: hidden;
+}
+.tl-label {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.58rem;
+    white-space: nowrap;
+    color: #333;
+    font-weight: 500;
+    pointer-events: none;
+    text-shadow: 0 0 4px rgba(255,255,255,0.8);
+}
+.tl-age-row {
+    font-size: 0.58rem;
+    color: #888;
+    padding: 2px 0 4px;
+}
+.tl-species-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: rgba(255, 215, 0, 0.45);
+    border: 2px solid #c8960c;
+    pointer-events: none;
+    z-index: 2;
+    border-radius: 2px;
+}
+.tl-zoom-header {
+    font-size: 0.78rem;
+    margin-bottom: 4px;
+    color: #555;
+}
+.normal-case { text-transform: none !important; font-size: 0.72rem; }

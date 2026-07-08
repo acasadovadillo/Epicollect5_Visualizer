@@ -37,8 +37,19 @@
                     <i class="fas fa-road me-1"></i>Atropellos
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="paleo.html">
+                    <i class="fas fa-bone me-1"></i>Paleo
+                </a>
+            </li>
         </ul>
-        <span id="last-updated" class="text-white-50 small d-none d-md-inline"></span>
+        <span id="last-updated" class="text-white-50 small d-none d-md-inline me-3"></span>
+        <button id="btn-navbar-login" class="btn btn-outline-light btn-sm">
+            <i class="fas fa-sign-in-alt me-1"></i>Entrar
+        </button>
+        <button id="btn-navbar-logout" class="btn btn-outline-light btn-sm d-none">
+            <i class="fas fa-sign-out-alt me-1"></i>Salir
+        </button>
     </div>
 </nav>
 
@@ -264,9 +275,44 @@
     </div>
 </div>
 
+<!-- Login modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-success text-white border-0 rounded-top">
+                <h6 class="modal-title mb-0">
+                    <i class="fas fa-leaf me-2"></i>Acceso al dashboard
+                </h6>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted small mb-3">Introduce la contraseña para acceder a los datos de Polvoranca.</p>
+                <div class="mb-3">
+                    <label class="form-label small fw-semibold">Contraseña</label>
+                    <div class="input-group">
+                        <input type="password" id="auth-password" class="form-control"
+                               placeholder="••••••••" autocomplete="current-password">
+                        <button class="btn btn-outline-secondary" type="button" id="btn-toggle-pwd" tabindex="-1">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div id="auth-error" class="text-danger small mt-2 d-none">
+                        <i class="fas fa-exclamation-circle me-1"></i>Contraseña incorrecta
+                    </div>
+                </div>
+                <div class="d-grid">
+                    <button id="btn-auth-submit" class="btn btn-success">
+                        <i class="fas fa-sign-in-alt me-2"></i>Entrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/atropellos.js"></script>
 <script>
     if ('serviceWorker' in navigator) {

@@ -32,6 +32,11 @@
       "name": "Atropellos",
       "url": "/atropellos.html",
       "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Paleo",
+      "url": "/paleo.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }
